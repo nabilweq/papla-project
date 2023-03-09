@@ -16,7 +16,7 @@ datagen = ImageDataGenerator(
         fill_mode='nearest'
     )
 
-source_path = '/Users/nabeeltk/Desktop/Papla project/Datasets/dataset-v2/first/'
+source_path = '/Users/nabeeltk/Desktop/Papla project/Datasets/dataset-v2/second/'
 
 path,dirs,files = next(os.walk(source_path))
 file_count = len(files)
@@ -34,7 +34,7 @@ for y in range(file_count):
 
   i = 0
   for batch in datagen.flow(x, batch_size=1,
-                            save_to_dir='augmented/first', save_prefix='first1', save_format='jpg'):
+                            save_to_dir='augmented/second', save_prefix='first1', save_format='jpg'):
     i += 1
     if i > 5:
        break
